@@ -4,12 +4,15 @@ server:
 
 spring:
   datasource:
-    url: jdbc:h2:mem:demodb
+    url: jdbc:h2:file:./TestDataBase
     username: sa
     password:
-    driverClassName: org.h2.Driver
+    driver-class-name: org.h2.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
 
   h2:
     console:
-      enable: true
-      path: /h2-console
+      enabled: true
+      path: /h2
